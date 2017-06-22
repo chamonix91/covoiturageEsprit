@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 covoiturage_user:
     resource: "@CovoiturageUserBundle/Resources/config/routing.yml"
+=======
+user:
+    resource: "@UserBundle/Resources/config/routing.yml"
+>>>>>>> a7150a70eb8384e8cd12d8946ea318c7d1a3a4e5
     prefix:   /
 
 covoiturage:
@@ -9,3 +14,8 @@ covoiturage:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
