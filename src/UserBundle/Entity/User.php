@@ -6,7 +6,7 @@ use FOS\UserBundle\Model\User as BaseUser;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
-
+use FOS\MessageBundle\Model\ParticipantInterface;
 /**
 
  * @ORM\Entity
@@ -15,7 +15,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
  */
 
-class User extends BaseUser
+class User extends BaseUser implements ParticipantInterface
 
 {
 
@@ -65,7 +65,7 @@ class User extends BaseUser
      * @ORM\Column(type="integer")
      */
 
-    private $solde;
+    private $solde=0;
 
 
     /**
@@ -73,7 +73,7 @@ class User extends BaseUser
      * @ORM\Column(type="string", length=255 )
      */
 
-    private $ville;
+    private $ville="";
 
 
     /**
@@ -93,7 +93,7 @@ class User extends BaseUser
      *
      */
 
-    private $imageProfil;
+    private $imageProfil="";
 
 
 
@@ -105,7 +105,7 @@ class User extends BaseUser
 
      */
 
-    private $telephone;
+    private $telephone=0;
 
     /**
      * @return mixed
