@@ -1,4 +1,4 @@
-<table>
+<table border="1" cellpadding="15" >
 
     <thead>
         <tr>
@@ -11,7 +11,7 @@
         </tr>
     </thead>
 
-    <tbody>
+    <tbody align="left" >
 
     {% if threads %}
         {% for thread in threads %}
@@ -25,16 +25,16 @@
                         ({% trans from 'FOSMessageBundle' %}new{% endtrans %})
                     {% endif %}
                 </td>
-                <td>
+                <td align="center">
                     {{ thread.createdBy }}
                 </td>
-                <td>
+                <td align="center">
                     {{ thread.createdAt|date }}
                 </td>
-                <td>
+                <td align="center">
                     {{ thread.messages|length }}
                 </td>
-                <td>
+                <td align="center">
                     {% if thread.lastMessage %}
                         <a href="{{ url('fos_message_thread_view', {'threadId': thread.id}) }}#message_{{ thread.lastMessage.id }}" title="{% trans from 'FOSMessageBundle' %}goto_last{% endtrans %}">
                             →
@@ -65,7 +65,7 @@
     {% else %}
         <tr>
             <td colspan="6">
-                {% trans from 'FOSMessageBundle' %}no_thread{% endtrans %}.
+                <h3>{% trans from 'FOSMessageBundle' %}no_thread{% endtrans %}</h3>.
             </td>
         </tr>
     {% endif %}
