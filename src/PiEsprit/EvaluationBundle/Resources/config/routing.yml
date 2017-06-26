@@ -1,0 +1,3 @@
+pi_esprit_evaluation_homepage:
+    path:     /eval1
+    defaults: { _controller: PiEspritEvaluationBundle:Default:new }

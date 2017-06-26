@@ -1,3 +1,7 @@
+pi_esprit_evaluation:
+    resource: "@PiEspritEvaluationBundle/Resources/config/routing.yml"
+    prefix:   /
+
 pi_esprit_message:
     resource: "@PiEspritMessageBundle/Resources/config/routing.yml"
     prefix:   /
